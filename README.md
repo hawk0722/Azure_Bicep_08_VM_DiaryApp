@@ -61,7 +61,7 @@ az group create --name <your resource group name> --location <location>
 ```
 
 4. To Deploy Azure resources, Run the following command.<br>
-   ※There should be main.bicep and cloud-init.txt in the current directory.
+   ※There should be main.bicep and cloud-init_web.txt, cloud-init_db.txt in the current directory.
 
 ```bash:bash
 az deployment group create --template-file main.bicep --resource-group <your resource group name> --parameters adminPassword='<login password for the Azure VM>' dbPassword='<login password for Database>'
