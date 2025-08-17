@@ -1,0 +1,16 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - apache2
+  - mysql-client
+  - php
+  - libapache2-mod-php
+  - php-mysql
+  - php-curl
+  - openssh-server
+runcmd:
+  - systemctl start apache2
+  - systemctl enable apache2
+  - systemctl start ssh
+  - systemctl enable ssh
